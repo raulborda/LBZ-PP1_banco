@@ -1,0 +1,189 @@
+{
+  "info": {
+    "name": "API Banco",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Con joins",
+      "item": [
+        {
+          "name": "Obtener Personas (con joins)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3001/api/personas",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "personas"]
+            }
+          }
+        },
+        {
+          "name": "Roles de una Persona",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3001/api/personas/1/roles",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "personas", "1", "roles"]
+            }
+          }
+        },
+        {
+          "name": "Productos de una Persona",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3001/api/personas/3/productos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "personas", "3", "productos"]
+            }
+          }
+        },
+        {
+          "name": "Crear Persona",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Laura\",\n  \"apellido\": \"Martínez\",\n  \"dni\": \"41000000\",\n  \"email\": \"laura.m@email.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/api/personas",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "personas"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tablas crudas (sin joins)",
+      "item": [
+        {
+          "name": "Personas",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3001/api/tablas/personas",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "tablas", "personas"]
+            }
+          }
+        },
+        {
+          "name": "Roles",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3001/api/tablas/roles",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "tablas", "roles"]
+            }
+          }
+        },
+        {
+          "name": "Roles x Personas",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3001/api/tablas/roles_x_personas",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "tablas", "roles_x_personas"]
+            }
+          }
+        },
+        {
+          "name": "Tipos de Producto",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3001/api/tablas/tipos_producto",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "tablas", "tipos_producto"]
+            }
+          }
+        },
+        {
+          "name": "Estados de Producto",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3001/api/tablas/estados_producto",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "tablas", "estados_producto"]
+            }
+          }
+        },
+        {
+          "name": "Productos",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3001/api/tablas/productos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "tablas", "productos"]
+            }
+          }
+        },
+        {
+          "name": "Cuentas Bancarias",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3001/api/tablas/cuentas_bancarias",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "tablas", "cuentas_bancarias"]
+            }
+          }
+        },
+        {
+          "name": "Tarjetas de Crédito",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3001/api/tablas/tarjetas_credito",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3001",
+              "path": ["api", "tablas", "tarjetas_credito"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

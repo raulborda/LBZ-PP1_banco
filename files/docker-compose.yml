@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: banco_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-admin123}
+      POSTGRES_DB: ${DB_NAME:-banco_db}
+    ports:
+      - "5432:5432"
+    volumes:
+      # Mapeamos la carpeta init para que ejecute los scripts al arrancar
+      - ./init:/docker-entrypoint-initdb.d
+      # Volumen para que los datos no se borren al apagar el contenedor
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
